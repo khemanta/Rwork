@@ -1,0 +1,24 @@
+Copyright: (c) 2004 - 2014
+Package: FinancialInstrument
+Maintainer: G See <gsee000@gmail.com>
+License: GPL
+Title: Financial Instrument Model Infrastructure for R
+Type: Package
+LazyLoad: yes
+Author: Peter Carl, Brian G. Peterson, Garrett See
+Description: Infrastructure for defining meta-data and
+    relationships for financial instruments.
+Version: 1.2.0
+URL: https://r-forge.r-project.org/projects/blotter/
+Date: 2014-10-07
+Depends: R (>= 2.12.0), quantmod (>= 0.4-3), zoo (>= 1.7-5), xts
+Imports: TTR
+Suggests: foreach, XML (>= 3.96.1.1), testthat, its, timeSeries
+Repository: R-Forge
+Repository/R-Forge/Project: blotter
+Repository/R-Forge/Revision: 1717
+Repository/R-Forge/DateTimeStamp: 2015-11-15 00:23:07
+Date/Publication: 2015-11-15 00:23:07
+NeedsCompilation: no
+Packaged: 2015-11-15 00:45:32 UTC; rforge
+Built: R 3.0.2; ; 2016-04-20 06:58:59 UTC; unix

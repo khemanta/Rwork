@@ -1,0 +1,83 @@
+---
+title: "Shiny Application Development from Aukland Volcano Datasets"
+author: "Kumar.Hemant"
+date: "Monday, February 15, 2016"
+output: html_document
+---
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r, echo=T, warning=T}
+op <- par(no.readonly = TRUE)
+z <- 2* volcano     # Exchange the relief
+x <- 10*(1:nrow(z)) # 10 meter spacing (S tO N)
+y <- 10*(1:ncol(z)) # 10 meter spacing (E tO W)
+par(bg = "white") # "lavender"
+persp(x,y,z,theta=0,phi=30,col="green3",scale=FALSE,LTHETA=-120,SHADE=0.95,BORDER=NA,box=FALSE)
+title("Perspective Plots with Volcano Maunga Whau in Auckland")
+persp(x,y,z, theta= 45, phi=30, col="green3",scale=FALSE,LTHETA=-120,SHADE=0.95,BORDER=NA,box=FALSE)
+persp(x,y,z, theta= 90, phi=30, col="green3",scale=FALSE,LTHETA=-120,SHADE=0.95,BORDER=NA,box=FALSE)
+persp(x,y,z, theta=135, phi=30, col="green3",scale=FALSE,LTHETA=-120,SHADE=0.95,BORDER=NA,box=FALSE)
+persp(x,y,z, theta=180, phi=30, col="green3",scale=FALSE,LTHETA=-120,SHADE=0.95,BORDER=NA,box=FALSE)
+persp(x,y,z, theta=225, phi=30, col="green3",scale=FALSE,LTHETA=-120,SHADE=0.95,BORDER=NA,box=FALSE)
+persp(x,y,z, theta=270, phi=30, col="green3",scale=FALSE,LTHETA=-120,SHADE=0.95,BORDER=NA,box=FALSE)
+persp(x,y,z, theta=315, phi=30, col="green3",scale=FALSE,LTHETA=-120,SHADE=0.95,BORDER=NA,box=FALSE)
+persp(x,y,z, theta=360, phi=30, col="green3",scale=FALSE,LTHETA=-120,SHADE=0.95,BORDER=NA,box=FALSE)
+persp(x,y,z, theta=360, phi=0, col="green3",scale=FALSE,LTHETA=-120,SHADE=0.95,BORDER=NA,box=FALSE)
+persp(x,y,z, theta=360, phi=-30, col="green3",scale=FALSE,LTHETA=-120,SHADE=0.95,BORDER=NA,box=FALSE)
+persp(x,y,z, theta=360, phi=-45, col="green3",scale=FALSE,LTHETA=-120,SHADE=0.95,BORDER=NA,box=FALSE)
+persp(x,y,z, theta=360, phi=-60, col="green3",scale=FALSE,LTHETA=-120,SHADE=0.95,BORDER=NA,box=FALSE)
+#title("Perspective Plots with Volcano")
+
+
+
+```
+
+```{r}
+#install.packages("RColorBrewer")
+library(RColorBrewer)
+cols <- colors()
+length(cols)
+cols[1:5]
+
+```
+
+You can also embed plots, for example:
+
+```{r, echo=TRUE}
+play.circle <- function(circle.counts=100, limits=3, radius=0.2, densitys=1){
+  circle <- function(x, y, r=1, col=1){
+    angle <- (0:360)*pi/180
+    pos.x <- r*cos(angle) + x
+    pos.y <- r*sin(angle) + y
+    lines(pos.x, pos.y, col=col)
+  }
+  leaf <- function(limits, xs, ys, radius, r=1, alpha="55"){
+    isin <- function(x, y){
+      any(sqrt((xs-x)^2 + (ys-y)^2) <= radius)
+    }
+    x <- runif(1, 0, limits)
+    y <- runif(1, 0, limits)
+    angle <- (0:360)*pi/180
+    pos.x <- r*cos(angle) +x
+    pos.y <- r*cos(angle) +y
+    polygon(pos.x, pos.y, col=paste(ifelse(isin(x,y), "#FF0000", "#00FF00"), alpha, sep=""), border=NA)    
+  }
+  xs <- runif(n=circle.counts, min=0, max=limits)
+  ys <- runif(n=circle.counts, min=0, max=limits)
+  plot(radius:(limits-radius), radius:(limits-radius), type='n', axes=F, xlab='',ylab='')
+  box()
+  for (i in 1:circle.counts){
+    circle(xs[i], ys[i], r=radius, col="#FF000066")
+  }
+  for (i in (1:circle.counts^2*densitys)){
+    leaf(limits, xs, ys, radius, r=radius/5)
+  }
+}
+
+play.circle()
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

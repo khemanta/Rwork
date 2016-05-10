@@ -1,0 +1,48 @@
+Ginv                    Generalized Inverse of a Matrix
+Inverse                 Inverse of a Matrix
+Proj                    Projection of Vector y on columns of X
+QR                      QR Decomposition by Graham-Schmidt
+                        Orthonormalization
+R                       Rank of a Matrix
+SVD                     Singular Value Decomposition of a Matrix
+arc                     Draw an arc showing the angle between vectors
+arrows3d                Draw 3D arrows
+cholesky                Cholesky Square Root of a Matrix
+class                   Class Data Set
+cofactor                Cofactor of A[i,j]
+cone3d                  Draw a 3D cone
+corner                  Draw a corner showing the angle between two
+                        vectors
+echelon                 Echelon Form of a Matrix
+eig                     Eigen Decomposition of a Square Symmetrix
+                        Matrix
+gaussianElimination     Gaussian Elimination
+gsorth                  Gram-Schmidt Orthogonalization of a Matrix
+len                     Length of a Vector or Column Lengths of a
+                        Matrix
+matlib                  matlib: Matrix Functions for Teaching and
+                        Learning Linear Algebra and Multivariate
+                        Statistics.
+minor                   Minor of A[i,j]
+mpower                  Matrix Power
+plot.regvec3d           Plot method for regvec3d objects
+plotEqn                 Plot Linear Equations
+plotEqn3d               Plot Linear Equations in 3D
+point_on_line           Position of a point along a line
+power_method            Power Method for Eigenvectors
+regvec3d                Vector space representation of a two-variable
+                        regression model
+row_cofactors           Row Cofactors of A[i,]
+row_minors              Row Minors of A[i,]
+rowadd                  Add multiples of rows to other rows
+rowmult                 Multiply Rows by Constants
+rowswap                 Interchange two rows of a matrix
+showEqn                 Show Matrices (A, b) as Linear Equations
+swp                     The Matrix Sweep Operator
+therapy                 Therapy Data
+tr                      Trace of a Matrix
+vandermode              Vandermode Matrix
+vec                     Vectorize a Matrix
+vectors                 Draw geometric vectors in 2D
+vectors3d               Draw 3D vectors
+workers                 Workers Data

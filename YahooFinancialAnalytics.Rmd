@@ -1,0 +1,26 @@
+---
+title: "YAHOO Financial Data Analytics"
+author: "Kumar Hemant"
+date: "April 20, 2016"
+output: html_document
+---
+
+# Time Series Plotting
+```{r}
+library(ggplot2)
+library(xts)
+library(dygraphs)
+ 
+# Get IBM and Linkedin stock data from Yahoo Finance
+ibm_url <- "http://real-chart.finance.yahoo.com/table.csv?s=IBM&a=07&b=24&c=2010&d=07&e=24&f=2015&g=d&ignore=.csv"
+lnkd_url <- "http://real-chart.finance.yahoo.com/table.csv?s=LNKD&a=07&b=24&c=2010&d=07&e=24&f=2015&g=d&ignore=.csv"
+ 
+yahoo.read <- function(url){
+   dat <- read.table(url,header=TRUE,sep=",")
+   df <- dat[,c(1,5)]
+   df$Date <- as.Date(as.character(df$Date))
+   return(df)}
+ 
+ibm  <- yahoo.read(ibm_url)
+lnkd2 <- yahoo.read(lnkd_url)
+```

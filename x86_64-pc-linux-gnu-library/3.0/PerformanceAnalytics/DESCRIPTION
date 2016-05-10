@@ -1,0 +1,51 @@
+Package: PerformanceAnalytics
+Type: Package
+Title: Econometric Tools for Performance and Risk Analysis
+Authors@R: c(
+  person(given=c("Brian","G."),family="Peterson",role=c("cre","aut","cph"), email="brian@braverock.com")
+  , person(given="Peter",family="Carl",role=c("aut","cph"), email="peter@braverock.com")
+  , person(given="Kris",family="Boudt",role=c("ctb","cph"))
+  , person(given="Ross",family="Bennett",role="ctb")
+  , person(given="Joshua",family="Ulrich",role="ctb")
+  , person(given="Eric",family="Zivot",role="ctb")
+  , person(given="Matthieu",family="Lestel",role="ctb")
+  , person(given="Kyle",family="Balkissoon",role="ctb")  
+  , person(given="Diethelm",family="Wuertz",role="ctb")  
+  )
+Version: 1.4.4000
+Date: $Date$
+Description: Collection of econometric functions for
+    performance and risk analysis. This package aims to aid
+    practitioners and researchers in utilizing the latest
+    research in analysis of non-normal return streams.  In
+    general, it is most tested on return (rather than
+    price) data on a regular scale, but most functions will
+    work with irregular return data as well, and increasing
+    numbers of functions will work with P&L or price data
+    where possible.
+Imports: zoo
+Depends: R (>= 3.0.0), xts (>= 0.9)
+Suggests: Hmisc, MASS, quantmod, gamlss, gamlss.dist, robustbase,
+        quantreg, gplots
+License: GPL-2 | GPL-3
+URL: http://r-forge.r-project.org/projects/returnanalytics/
+Copyright: (c) 2004-2015
+RoxygenNote: 4.1.1.9001
+Author: Brian G. Peterson [cre, aut, cph],
+  Peter Carl [aut, cph],
+  Kris Boudt [ctb, cph],
+  Ross Bennett [ctb],
+  Joshua Ulrich [ctb],
+  Eric Zivot [ctb],
+  Matthieu Lestel [ctb],
+  Kyle Balkissoon [ctb],
+  Diethelm Wuertz [ctb]
+Maintainer: Brian G. Peterson <brian@braverock.com>
+Repository: R-Forge
+Repository/R-Forge/Project: returnanalytics
+Repository/R-Forge/Revision: 4009
+Repository/R-Forge/DateTimeStamp: 2016-03-06 16:31:25
+Date/Publication: 2016-03-06 16:31:25
+NeedsCompilation: yes
+Packaged: 2016-03-06 16:46:30 UTC; rforge
+Built: R 3.0.2; x86_64-pc-linux-gnu; 2016-04-20 06:58:54 UTC; unix

@@ -1,0 +1,15 @@
+CUR                     Function to perform CUR matrix decomposition
+CURobj-class            Class "CURobj"
+STTa                    Annotation data.frame of soft tissue tumour
+                        gene expression dataset
+STTm                    Soft tissue tumour dataset
+getC                    Retrieve matrix C from CURobj-class
+getError                Retrieve the error of the approximation from
+                        CURobj-class
+getR                    Retrieve matrix R from CURobj-class
+getU                    Retrieve matrix U from CURobj-class
+leverage                Retrieve leverage scores from CURobj-class
+plotLeverage            Function to plot leverage scores
+rCUR-package            CUR matrix decomposition package
+topLeverage             Function to obtain indexes of the most
+                        influental features due to leverage score

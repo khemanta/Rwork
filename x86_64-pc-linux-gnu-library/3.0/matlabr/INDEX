@@ -1,0 +1,8 @@
+get_matlab              Find matlab path
+have_matlab             Logical check if MALTAB is accessible
+rmat_to_matlab_mat      Convert R matrix to matlab matrix
+run_matlab_code         Runs matlab code
+run_matlab_script       Run matlab script
+rvec_to_matlab          Convert R vector to matlab cell mat
+rvec_to_matlabcell      Convert R vector to matlab cell
+rvec_to_matlabclist     Convert R vector to matlab cell mat
