@@ -1,0 +1,15 @@
+---
+title: "Flower Predictor App"
+author: "K.Hemant"
+output: ioslides_presentation
+---
+
+## Overview
+
+This Shiny app predicts the petal width of an iris flower from its sepal width using the iris dataset.
+
+## How it Works
+
+The app uses a simple linear regression model:
+```{r}
+summary(lm(Petal.Width ~ Sepal.Width, data = iris))
