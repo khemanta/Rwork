@@ -1,0 +1,10 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/1316459/561fec40221c41ada4daea413814ef96
+bundleId: https://api.rpubs.com/api/v1/document/1316459/561fec40221c41ada4daea413814ef96
+url: http://rpubs.com/khemanta/1316459/edit
+version: 1

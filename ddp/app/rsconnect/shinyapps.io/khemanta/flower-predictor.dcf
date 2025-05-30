@@ -1,0 +1,10 @@
+name: flower-predictor
+title:
+username: khemanta
+account: khemanta
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14851580
+bundleId: 10366878
+url: https://khemanta.shinyapps.io/flower-predictor/
+version: 1

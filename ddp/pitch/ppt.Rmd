@@ -9,7 +9,9 @@ output:
 
 ## 🌸 Welcome to the Iris Flower Predictor
 
-![](./iris1.jpg){width=70%}
+<img src="iris1.jpg" width="100%" />
+
+
 
 ### Predict the Petal Width of Iris Flowers Based on Input Features  
 Built using R Shiny, linear models, and interactive UI
@@ -34,7 +36,7 @@ Built using R Shiny, linear models, and interactive UI
   - Petal.Length, Species
   - Petal.Width (predicted)
 
-![](./iris3.jpg){width=50%}
+<img src="www/iris3.jpg" style="width: 60%; display: block; margin-left: auto; margin-right: auto;"/>
 
 ---
 
@@ -55,9 +57,7 @@ Built using R Shiny, linear models, and interactive UI
 ```{r echo=TRUE, message=FALSE}
 model <- lm(Petal.Width ~ Sepal.Width + Sepal.Length + Petal.Length + Species, data = iris)
 summary(model)
-```
 
----
 
 ## 📈 Model Diagnostics
 
@@ -65,7 +65,7 @@ summary(model)
 library(ggplot2)
 library(broom)
 
-model_diag <- broom::augment(model)
+model_diag <- augment(model)
 ggplot(model_diag, aes(.fitted, .resid)) +
   geom_point(color = "darkblue") +
   geom_hline(yintercept = 0, linetype="dashed", color="red") +
@@ -87,8 +87,11 @@ ggplot(model_diag, aes(.fitted, .resid)) +
 
 ## 🔗 Source & Demo
 
-- Source code on [GitHub](https://github.com/khemanta/Rwork/ddp)  
+- Source code on [GitHub](https://github.com/khemanta/Rwork/tree/master/ddp/)  
 - Live demo at [shinyapps.io](https://khemanta.shinyapps.io/flower-predictor/)  
 - Contact: Hemant K. (khemanta@outlook.com)
 
----
+--- 
+
+
+  

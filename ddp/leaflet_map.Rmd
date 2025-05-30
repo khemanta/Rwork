@@ -1,17 +1,36 @@
 ---
-title: "My Leaflet Map Project"
-author: "Hemant K."
-date: "`r format(Sys.Date(), '%B %d, %Y')`"
+title: "🌍 My Favorite Places Around the World"
+author: "Hemant,K."
+date: "`r Sys.Date()`"
 output: html_document
 ---
 
-## Interactive Map Using Leaflet
+## 🗺️ Overview
 
-Here's an interactive map I created using the **leaflet** package in R.
+This interactive map shows a few of my favorite places across the globe. Click on each marker to learn more — and see iconic views!
 
-```{r leaflet-map, echo=FALSE}
+```{r map, echo=FALSE}
 library(leaflet)
 
 leaflet() %>%
   addTiles() %>%
-  addMarkers(lng = 77.5946, lat = 12.9716, popup = "Bangalore!")
+  addMarkers(
+    lng = -74.006, lat = 40.7128,
+    popup = "<b>New York City</b><br>The city that never sleeps! 🗽<br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Manhattan_skyline_from_Jersey_City_November_2014_panorama_3.jpg/320px-Manhattan_skyline_from_Jersey_City_November_2014_panorama_3.jpg' width='200'>"
+  ) %>%
+  addMarkers(
+    lng = 2.3522, lat = 48.8566,
+    popup = "<b>Paris</b><br>Bonjour! City of lights and croissants 🥐<br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg/320px-Tour_Eiffel_Wikimedia_Commons.jpg' width='200'>"
+  ) %>%
+  addMarkers(
+    lng = 139.6917, lat = 35.6895,
+    popup = "<b>Tokyo</b><br>High-tech meets tradition. 🍣<br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Tokyo_Montage_2015.jpg/320px-Tokyo_Montage_2015.jpg' width='200'>"
+  ) %>%
+  addMarkers(
+    lng = 77.2090, lat = 28.6139,
+    popup = "<b>Delhi</b><br>The heart of India! 🇮🇳<br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/India_Gate_in_New_Delhi_03-2016_img3.jpg/320px-India_Gate_in_New_Delhi_03-2016_img3.jpg' width='200'>"
+  ) %>%
+  addMarkers(
+    lng = -58.3816, lat = -34.6037,
+    popup = "<b>Buenos Aires</b><br>Home of tango and steak 🥩<br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Cabildo_y_piramide_de_Mayo_-_Buenos_Aires.JPG/320px-Cabildo_y_piramide_de_Mayo_-_Buenos_Aires.JPG' width='200'>"
+  )

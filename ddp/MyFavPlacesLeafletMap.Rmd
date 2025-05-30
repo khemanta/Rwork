@@ -1,6 +1,6 @@
 ---
 title: "🌍 My Favorite Places Around the World"
-author: "Your Name"
+author: "Hemant, K."
 date: "`r Sys.Date()`"
 output: html_document
 ---

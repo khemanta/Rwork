@@ -1,0 +1,69 @@
+/* custom.css */
+
+/* Body font and color */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+/* Slide title style */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: #2a9d8f;
+}
+
+/* Slide background */
+.slide {
+  padding: 40px 60px;
+}
+
+/* Images - make full width and responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* Table style */
+table.dataframe, table.dataframe th, table.dataframe td {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  padding: 8px;
+}
+
+table.dataframe th {
+  background-color: #264653;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Floating predict button style */
+.predict-button {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: #e76f51;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(231,111,81,0.5);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.predict-button:hover {
+  background-color: #f4a261;
+}
+
+/* Footer developer name */
+.footer {
+  text-align: center;
+  font-style: italic;
+  margin-top: 40px;
+  color: #6c757d;
+}
