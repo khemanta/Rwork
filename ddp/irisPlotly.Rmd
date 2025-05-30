@@ -1,0 +1,102 @@
+---
+title: "Exploring the Iris Dataset with Plotly"
+author: "K Hemant"
+date: "`r Sys.Date()`"
+output: ioslides_presentation
+---
+
+## Introduction
+
+Welcome to the interactive exploration of the classic **Iris dataset**!  
+In this presentation, we'll use **Plotly** for dynamic visualizations.
+
+---
+
+## About the Iris Dataset
+
+- Contains measurements for **3 species** of iris flowers.
+- Variables:
+  - Sepal Length & Width
+  - Petal Length & Width
+- Famous for classification tasks and visual analytics.
+
+---
+
+## Required Libraries
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(dplyr)
+library(plotly)
+
+
+## Preview of the Data
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+
+head(iris)
+
+
+## Scatter Plot: Sepal.Length vs Petal.Length
+
+plot_ly(iris, x = ~Sepal.Length, y = ~Petal.Length,
+        color = ~Species, type = 'scatter', mode = 'markers',
+        marker = list(size = 10, opacity = 0.7),
+        text = ~paste("Sepal Width:", Sepal.Width, "<br>Petal Width:", Petal.Width))
+
+## Histogram: Sepal Length Distribution
+plot_ly(iris, x = ~Sepal.Length, type = 'histogram',
+        nbinsx = 20, color = ~Species, barmode = "overlay",
+        opacity = 0.6)
+
+## Boxplot: Petal Width by Species
+
+plot_ly(iris, y = ~Petal.Width, x = ~Species, type = "box", color = ~Species)
+
+## Scatter Plot: Sepal.Width vs Petal.Width
+plot_ly(iris, x = ~Sepal.Width, y = ~Petal.Width,
+        color = ~Species, type = 'scatter', mode = 'markers',
+        marker = list(size = 10, opacity = 0.7))
+
+
+## Pairwise Feature Scatter Matrix
+plot_ly(data = iris, type = 'splom',
+        dimensions = list(
+            list(label = 'Sepal Length', values = ~Sepal.Length),
+            list(label = 'Sepal Width', values = ~Sepal.Width),
+            list(label = 'Petal Length', values = ~Petal.Length),
+            list(label = 'Petal Width', values = ~Petal.Width)
+        ),
+        text = ~Species,
+        marker = list(color = ~as.integer(Species),
+                      colorscale = 'Viridis',
+                      showscale = FALSE,
+                      line = list(width = 0.5, color = 'black')))
+
+## Correlation Heatmap
+numeric_iris <- iris %>% select(-Species)
+corr <- round(cor(numeric_iris), 2)
+
+plot_ly(
+  x = colnames(corr),
+  y = rownames(corr),
+  z = corr,
+  type = "heatmap",
+  colorscale = "Blues"
+)
+
+
+## Key Takeaways
+
+* Setosa is distinctly different in petal features
+* Petal.Length and Petal.Width are strongly correlated
+* Plotly makes EDA fun and interactive
+
+---
+
+
+
+
+
+
