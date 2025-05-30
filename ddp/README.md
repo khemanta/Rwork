@@ -39,14 +39,4 @@ Built by **Hemant K.** – khemanta@outlook.com
 
 The working directory for the shiny app looks like below tree: 
 
-RWork/ddp/
-├── app/
-│   ├── ui.R
-│   ├── server.R
-│   └── www/
-│       └── iris.jpg
-├── pitch/
-│   ├── pitch.Rmd
-│   ├── pitch.html   <-- auto-generated after knitting
-│   └── .nojekyll    <-- for GitHub Pages to work if needed
-└── README.md
+<pre> ```text > tree . ├── app │   ├── rsconnect │   │   └── shinyapps.io │   │   └── khemanta │   │   └── flower-predictor.dcf │   ├── server.R │   ├── ui.R │   └── www │   ├── iris.jpg │   ├── iris1.jpg │   ├── iris2.jpg │   └── iris3.jpg ├── ddp.Rproj ├── docs │   ├── leaflet_map.html │   └── pitch.html ├── leaflet_map.Rmd ├── MyFavPlacesLeafletMap.html ├── MyFavPlacesLeafletMap.Rmd ├── pitch │   ├── custom.css │   ├── iris.jpg │   ├── iris1.jpg │   ├── iris2.jpg │   ├── iris3.jpg │   ├── pitch.html │   ├── pitch.Rmd │   ├── ppt.Rmd │   ├── publish_presentation.R │   └── rsconnect │   └── documents │   └── pitch.Rmd │   └── rpubs.com │   └── rpubs │   ├── Document.dcf │   └── Publish Document.dcf ├── README.md ├── rsconnect │   └── documents │   └── MyFavPlacesLeafletMap.Rmd │   └── rpubs.com │   └── rpubs │   └── Document.dcf └── screenshots ├── slide1.png ├── slide2.png └── slide3.png 19 directories, 29 files (base) ``` </pre>
